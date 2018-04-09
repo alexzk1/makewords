@@ -1,0 +1,25 @@
+pkgname=makewords
+pkgver=r5.fcfc41f
+pkgrel=1
+pkgdesc="Unix utility to break STDIN into words and print it to STDOUT each word on new line."
+arch=('x86_64' 'i686' 'arm')
+url="https://github.com/alexzk1/makewords"
+license=('GPL')
+makedepends=('git')
+source=('git://github.com/alexzk1/makewords')
+sha256sums=('SKIP')
+_gitname='makewords'
+
+pkgver() {
+  cd $_gitname
+  printf "r%s.%s" "$(git rev-list --count HEAD)" "$(git rev-parse --short HEAD)"
+}
+build() {
+  cd $_gitname  
+  make
+}
+package() {
+  cd $_gitname  
+  mkdir -p "$pkgdir/usr/bin/"
+  install -Dm755 "$srcdir"/makewords/makewords "$pkgdir"/usr/bin/makewords
+}
