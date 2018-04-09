@@ -2,6 +2,7 @@
 #include <iostream>
 #include <sstream>
 
+//I think, those characters should not be part of "word" as well. 
 const static std::string delimeters="~`!@#$%^&*()-=+><,.?/|\\\"';:][{}_";
 
 static void usage()
