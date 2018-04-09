@@ -1,5 +1,5 @@
 pkgname=makewords
-pkgver=r8.13ee209
+pkgver=r9.fae3551
 pkgrel=1
 pkgdesc="Unix utility to break STDIN into words and print it to STDOUT each word on new line."
 arch=('x86_64' 'i686' 'arm')
