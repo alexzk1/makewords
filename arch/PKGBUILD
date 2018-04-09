@@ -1,10 +1,11 @@
 pkgname=makewords
-pkgver=r9.fae3551
-pkgrel=1
+pkgver=r10.b3dd3ea
+pkgrel=2
 pkgdesc="Unix utility to break STDIN into words and print it to STDOUT each word on new line."
 arch=('x86_64' 'i686' 'arm')
 url="https://github.com/alexzk1/makewords"
 license=('GPL')
+depends=('icu')
 makedepends=('git')
 source=('git://github.com/alexzk1/makewords')
 sha256sums=('SKIP')
